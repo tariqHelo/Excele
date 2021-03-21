@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAllBECSTable extends Migration
+class CreateISICRev4Table extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateAllBECSTable extends Migration
      */
     public function up()
     {
-        Schema::create('all__b_e_c_s', function (Blueprint $table) {
+        Schema::create('i_s_i_c_rev_4', function (Blueprint $table) {
             $table->id();
-            $table->string('Classification')->nullable();
             $table->string('Code')->nullable();
             $table->longText('Description')->nullable();
-            $table->string('ParentCode')->nullable();
-            $table->string('Level')->nullable();
-            $table->string('IsBasicLevel')->nullable();
+            $table->string('وصف')->nullable();
+            $table->string('status')->nullable();
 
             $table->timestamps();
         });
@@ -33,6 +31,6 @@ class CreateAllBECSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('all__b_e_c_s');
+        Schema::dropIfExists('i_s_i_c_rev_4');
     }
 }
