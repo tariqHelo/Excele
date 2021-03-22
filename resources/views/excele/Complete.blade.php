@@ -25,9 +25,8 @@
                         </div>
                     </div>
                     <!-- Page-header end -->
-                    <form action="" method="post" class="j-pro" id="j-pro"></form>
-                    <div class="j-wrapper">
-                        <form method="POST" class="j-pro" id="j-pro" enctype="multipart/form-data" action="{{ route('import_excel') }}" enctype="multipart/form-data" novalidate="">
+      
+                        <form  action="{{ route('x1') }}" method="POST" class="j-pro" id="j-pro" enctype="multipart/form-data" novalidate="">
                              @csrf
                             <div class="j-content">
                                 <!-- start file -->
@@ -109,24 +108,36 @@
                                 <table id="dom-jqry" class="table table-sm table-striped table-bordered nowrap">
                                     <thead>
                                         <tr>
-                                            <th>Classification</th>
-                                            <th>Code</th>
-                                            <th>Description</th>
-                                             <th>Parent Code</th>
-                                             <th>Level</th>
-                                            <th>IsBasicLevel</th>
+                                            <th>HS92</th>   
+                                            <th>HS96</th>
+                                            <th>HS02</th>
+                                            <th>HS07</th>
+                                            <th>HS12</th>
+                                            <th>HS17</th>
+                                            <th>HS1447</th>
+                                            <th>BEC4</th>
+                                            <th>SITC1</th>
+                                            <th>SITC2</th>
+                                           <th>SITC3</th>
+                                            <th>SITC4</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($data as $row)
                                             <tr role="row" class="odd">
                                                 <td class="">{{ $row->id }}</td>
-                                                <td class="">{{ $row->Classification }}</td>
-                                                <td class="">{{ $row->Code }}</td>
-                                                <td class="">{{ $row->Description ?? "" }}</td>
-                                                <td class="">{{ $row->ParentCode ?? "" }}</td>
-                                                <td class="">{{ $row->Level ?? "" }}</td>
-                                                <td class="">{{ $row->IsBasicLevel ?? "" }}</td>
+                                                <td class="">{{ $row->HS92 }}</td>
+                                                <td class="">{{ $row->HS96 }}</td>
+                                                <td class="">{{ $row->HS02 }}</td>
+                                                <td class="">{{ $row->HS07 ?? "" }}</td>
+                                                <td class="">{{ $row->HS12 ?? "" }}</td>
+                                                <td class="">{{ $row->HS17 ?? "" }}</td>
+                                                <td class="">{{ $row->HS1447 ?? "" }}</td>
+                                                <td class="">{{ $row->BEC4 ?? "" }}</td>
+                                                <td class="">{{ $row->SITC1 ?? "" }}</td>
+                                                <td class="">{{ $row->SITC2 ?? "" }}</td>
+                                                <td class="">{{ $row->SITC3 ?? "" }}</td>
+                                                <td class="">{{ $row->SITC4 ?? "" }}</td>
 
                                                 <td class="text-center">
                                                     <a class="m-r-15 text-muted importEdit" data-toggle="modal" data-idUpdate="'.$row->id.'" data-target="#ImportUpdate">Edit</a>

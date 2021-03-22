@@ -17,7 +17,7 @@ class CreateNiceClassificationTable extends Migration
             $table->id();
              $table->string('Class')->nullable();
             $table->string('BasicNo')->nullable();
-            $table->string('EN-(11-2021)')->nullable();
+            $table->string('EN')->nullable();
 
             $table->timestamps();
         });

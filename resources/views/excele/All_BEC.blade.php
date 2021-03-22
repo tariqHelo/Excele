@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <!-- Page-header end -->
-                    <form action="" method="post" class="j-pro" id="j-pro"></form>
+                    <form action="{{ route('import_excel') }}" method="post" class="j-pro" id="j-pro"></form>
                     <div class="j-wrapper">
                         <form method="POST" class="j-pro" id="j-pro" enctype="multipart/form-data" action="{{ route('import_excel') }}" enctype="multipart/form-data" novalidate="">
                              @csrf

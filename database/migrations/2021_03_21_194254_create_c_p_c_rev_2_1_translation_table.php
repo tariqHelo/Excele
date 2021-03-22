@@ -16,9 +16,10 @@ class CreateCPCRev21TranslationTable extends Migration
         Schema::create('c_p_c_rev_2_1_translation', function (Blueprint $table) {
             $table->id();
             
+
             $table->string('CPC21code')->nullable();
-            $table->string('CPC21title')->nullable();
-            $table->string('العنوان')->nullable();
+            $table->longText('CPC21title')->nullable();
+            $table->longText('title')->nullable();
             $table->string('status')->nullable();
 
 

@@ -13,7 +13,7 @@ use Auth;
 use Image;
 use Carbon\Carbon;
 
-class ExceleImportController extends Controller
+class DropImportController3 extends Controller
 { 
     
     public function index()
@@ -21,9 +21,10 @@ class ExceleImportController extends Controller
        $data = DB::table('c_p_c2_1_and__i_s_i_c__rev_and__h_s_2017')->orderBy('id', 'ASC')->get();
       // dd($data);
 
-       return view('excele.All_BEC')->with('data' ,$data);
+       return view('excele.CPC2_1')->with('data' ,$data);
 
      }
+
 
      public function import(Request $request)
      {  ///dd(20);
@@ -35,7 +36,7 @@ class ExceleImportController extends Controller
         ]);
         $file = $request->select_file;
         Excel::import(new ExcelImport3 ,$file);
-        return redirect()->route('excel');
+        return redirect()->back();
      }
 
 }

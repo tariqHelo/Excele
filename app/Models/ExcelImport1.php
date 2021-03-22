@@ -6,7 +6,7 @@ use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
 use DB;
 
-class ExcelImport implements ToCollection
+class ExcelImport1 implements ToCollection
 {
     /**
     * @param Collection $collection
@@ -16,7 +16,7 @@ class ExcelImport implements ToCollection
         DB::table('h_s__s_i_t_c__b_e_c')->truncate();
         foreach($collection as $key => $value)
         {
-           //  dd($value[0]);
+             dd($value[0]);
             if($key > 0)
             {
                 if($value[1] == null):

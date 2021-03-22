@@ -13,7 +13,7 @@ use Auth;
 use Image;
 use Carbon\Carbon;
 
-class ExceleImportController extends Controller
+class NiceImportController5 extends Controller
 { 
     
     public function index()
@@ -21,12 +21,12 @@ class ExceleImportController extends Controller
        $data = DB::table('nice__classification')->orderBy('id', 'ASC')->get();
       // dd($data);
 
-       return view('excele.All_BEC')->with('data' ,$data);
+       return view('excele.Nice_Classification')->with('data' ,$data);
 
      }
 
      public function import(Request $request)
-     {  ///dd(20);
+     {  //dd(20);
         $this->validate($request, [
         'select_file' => 'required|mimes:xls,xlsx'
         ],
@@ -35,7 +35,7 @@ class ExceleImportController extends Controller
         ]);
         $file = $request->select_file;
         Excel::import(new ExcelImport5 ,$file);
-        return redirect()->route('excel');
+        return redirect()->back();
      }
 
 }

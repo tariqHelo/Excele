@@ -25,9 +25,8 @@
                         </div>
                     </div>
                     <!-- Page-header end -->
-                    <form action="" method="post" class="j-pro" id="j-pro"></form>
                     <div class="j-wrapper">
-                        <form method="POST" class="j-pro" id="j-pro" enctype="multipart/form-data" action="{{ route('import_excel') }}" enctype="multipart/form-data" novalidate="">
+                        <form method="POST" class="j-pro" id="j-pro"  action="{{ route('import_excel2') }}" enctype="multipart/form-data" novalidate="">
                              @csrf
                             <div class="j-content">
                                 <!-- start file -->
@@ -109,24 +108,21 @@
                                 <table id="dom-jqry" class="table table-sm table-striped table-bordered nowrap">
                                     <thead>
                                         <tr>
-                                            <th>Classification</th>
-                                            <th>Code</th>
-                                            <th>Description</th>
-                                             <th>Parent Code</th>
-                                             <th>Level</th>
-                                            <th>IsBasicLevel</th>
+                                            <th>id</th>
+                                            <th>CPC21code</th>
+                                            <th>CPC21title</th>
+                                            <th>title</th>
+                                             <th>status</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($data as $row)
                                             <tr role="row" class="odd">
                                                 <td class="">{{ $row->id }}</td>
-                                                <td class="">{{ $row->Classification }}</td>
-                                                <td class="">{{ $row->Code }}</td>
-                                                <td class="">{{ $row->Description ?? "" }}</td>
-                                                <td class="">{{ $row->ParentCode ?? "" }}</td>
-                                                <td class="">{{ $row->Level ?? "" }}</td>
-                                                <td class="">{{ $row->IsBasicLevel ?? "" }}</td>
+                                                <td class="">{{ $row->CPC21code }}</td>
+                                                <td class="">{{ $row->CPC21title }}</td>
+                                                <td class="">{{ $row->title ?? "" }}</td>
+                                                <td class="">{{ $row->status }}</td>
 
                                                 <td class="text-center">
                                                     <a class="m-r-15 text-muted importEdit" data-toggle="modal" data-idUpdate="'.$row->id.'" data-target="#ImportUpdate">Edit</a>
