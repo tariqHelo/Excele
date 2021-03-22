@@ -18,7 +18,7 @@ class CreateCPC21AndISICRevAndHS2017Table extends Migration
             $table->string('HS2017')->nullable();
             $table->string('HSpartial')->nullable();
             $table->longText('Description')->nullable();
-            $table->string('CPCVer.2.1')->nullable();
+            $table->string('CPCVer')->nullable();
             $table->string('CPCpartial')->nullable();
             $table->string('CPC21title')->nullable();
             $table->string('ISIC4code')->nullable();

@@ -19,6 +19,7 @@ class CreateHSSITCBECTable extends Migration
              $table->integer('HS96')->nullable();
              $table->integer('HS02')->nullable();
              $table->integer('HS07')->nullable();
+             
              $table->integer('HS12')->nullable();
              $table->integer('HS17')->nullable();
              $table->integer('HS1447')->nullable();
@@ -26,7 +27,7 @@ class CreateHSSITCBECTable extends Migration
              $table->integer('SITC1')->nullable();
              $table->integer('SITC2')->nullable();
              $table->integer('SITC3')->nullable();
-             $table->integer('SITC1')->nullable();
+             $table->integer('SITC4')->nullable();
             $table->timestamps();
         });
     }
