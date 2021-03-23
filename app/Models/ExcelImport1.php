@@ -13,16 +13,16 @@ class ExcelImport1 implements ToCollection
     */
     public function collection(Collection $collection)
     {
-        DB::table('h_s__s_i_t_c__b_e_c')->truncate();
+        DB::table('complete')->truncate();
         foreach($collection as $key => $value)
         {
-             dd($value[0]);
+            // dd($value[0]);
             if($key > 0)
             {
                 if($value[1] == null):
                     continue;
                 endif;
-                DB::table('h_s__s_i_t_c__b_e_c')->insert([
+                DB::table('complete')->insert([
                     //'id'	    =>$value[0]
                       'HS92' =>$value[0]
                      ,'HS96' =>$value[1]

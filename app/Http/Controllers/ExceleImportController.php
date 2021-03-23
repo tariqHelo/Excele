@@ -35,7 +35,7 @@ class ExceleImportController extends Controller
         ]);
         $file = $request->select_file;
         Excel::import(new ExcelImport ,$file);
-        return redirect()->route('excel');
+        return redirect()->back();
      }
 
 }

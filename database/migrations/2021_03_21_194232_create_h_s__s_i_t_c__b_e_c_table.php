@@ -13,20 +13,20 @@ class CreateHSSITCBECTable extends Migration
      */
     public function up()
     {
-        Schema::create('h_s__s_i_t_c__b_e_c', function (Blueprint $table) {
+        Schema::create('complete', function (Blueprint $table) {
             $table->id();
-             $table->integer('HS92')->nullable();
-             $table->integer('HS96')->nullable();
-             $table->integer('HS02')->nullable();
-             $table->integer('HS07')->nullable();
-             $table->integer('HS12')->nullable();
-             $table->integer('HS17')->nullable();
-             $table->integer('HS1447')->nullable();
-             $table->integer('BEC4')->nullable();
-             $table->integer('SITC1')->nullable();
-             $table->integer('SITC2')->nullable();
-             $table->integer('SITC3')->nullable();
-             $table->integer('SITC4')->nullable();
+             $table->string('HS92')->nullable();
+             $table->string('HS96')->nullable();
+             $table->string('HS02')->nullable();
+             $table->string('HS07')->nullable();
+             $table->string('HS12')->nullable();
+             $table->string('HS17')->nullable();
+             $table->string('HS1447')->nullable();
+             $table->string('BEC4')->nullable();
+             $table->string('SITC1')->nullable();
+             $table->string('SITC2')->nullable();
+             $table->string('SITC3')->nullable();
+             $table->string('SITC4')->nullable();
             $table->timestamps();
         });
     }

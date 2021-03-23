@@ -18,7 +18,7 @@ class NiceImportController5 extends Controller
     
     public function index()
      {
-       $data = DB::table('nice__classification')->orderBy('id', 'ASC')->get();
+       $data = DB::table('nice_classification')->orderBy('id', 'ASC')->get();
       // dd($data);
 
        return view('excele.Nice_Classification')->with('data' ,$data);

@@ -4,10 +4,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-
-
-
-
 <div class="container">
     <div class="pcoded-content">
         <div class="pcoded-inner-content">
@@ -124,13 +120,9 @@
                                                 <td class="">{{ $row->id }}</td>
                                                 <td class="">{{ $row->Code }}</td>
                                                <td class="">{{ $row->Description }}</td>
-                                                //<td class="">{{ $row->Desc ?? "" }}</td>
+                                                <td class="">{{ $row->desc ?? "" }}</td>
                                                 <td class="">{{ $row->status }}</td>
 
-                                                <td class="text-center">
-                                                    <a class="m-r-15 text-muted importEdit" data-toggle="modal" data-idUpdate="'.$row->id.'" data-target="#ImportUpdate">Edit</a>
-                                                    <a href="import_excel/{{ $row->id }}" onclick="return confirm('Are you sure to want to delete it?')" class="text-muted">Delect</a>
-                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

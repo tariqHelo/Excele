@@ -13,7 +13,7 @@ class ExcelImport5 implements ToCollection
     */
     public function collection(Collection $collection)
     {//dd(40);
-        DB::table('nice__classification')->truncate();
+        DB::table('nice_classification')->truncate();
         foreach($collection as $key => $value)
         {
            // dd($value[0]);
@@ -22,7 +22,7 @@ class ExcelImport5 implements ToCollection
                 if($value[1] == null):
                     continue;
                 endif;
-                DB::table('nice__classification')->insert([
+                DB::table('nice_classification')->insert([
                      'Class'    =>$value[0]
                      ,'BasicNo' =>$value[1]
                      ,'EN'      =>$value[2]

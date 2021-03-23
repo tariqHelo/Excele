@@ -109,6 +109,7 @@
                                 <table id="dom-jqry" class="table table-sm table-striped table-bordered nowrap">
                                     <thead>
                                         <tr>
+                                            <td>id</td>
                                             <th>Classification</th>
                                             <th>Code</th>
                                             <th>Description</th>
@@ -128,10 +129,10 @@
                                                 <td class="">{{ $row->Level ?? "" }}</td>
                                                 <td class="">{{ $row->IsBasicLevel ?? "" }}</td>
 
-                                                <td class="text-center">
+                                                {{-- <td class="text-center">
                                                     <a class="m-r-15 text-muted importEdit" data-toggle="modal" data-idUpdate="'.$row->id.'" data-target="#ImportUpdate">Edit</a>
                                                     <a href="import_excel/{{ $row->id }}" onclick="return confirm('Are you sure to want to delete it?')" class="text-muted">Delect</a>
-                                                </td>
+                                                </td> --}}
                                             </tr>
                                         @endforeach
                                     </tbody>

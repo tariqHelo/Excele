@@ -26,7 +26,7 @@
                     </div>
                     <!-- Page-header end -->
       
-                        <form  action="{{ route('x1') }}" method="POST" class="j-pro" id="j-pro" enctype="multipart/form-data" novalidate="">
+                        <form  method="POST"action="{{ route('x1') }}"  class="j-pro" id="j-pro" enctype="multipart/form-data" novalidate="">
                              @csrf
                             <div class="j-content">
                                 <!-- start file -->
@@ -108,6 +108,7 @@
                                 <table id="dom-jqry" class="table table-sm table-striped table-bordered nowrap">
                                     <thead>
                                         <tr>
+                                           <th>id</th>   
                                             <th>HS92</th>   
                                             <th>HS96</th>
                                             <th>HS02</th>

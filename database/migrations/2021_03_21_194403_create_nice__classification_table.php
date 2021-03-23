@@ -13,7 +13,7 @@ class CreateNiceClassificationTable extends Migration
      */
     public function up()
     {
-        Schema::create('nice__classification', function (Blueprint $table) {
+        Schema::create('nice_classification', function (Blueprint $table) {
             $table->id();
              $table->string('Class')->nullable();
             $table->string('BasicNo')->nullable();

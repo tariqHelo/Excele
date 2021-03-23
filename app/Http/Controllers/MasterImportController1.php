@@ -18,7 +18,7 @@ class MasterImportController1 extends Controller
     
     public function index()
      {
-       $data = DB::table('h_s__s_i_t_c__b_e_c')->orderBy('id', 'ASC')->get();
+       $data = DB::table('complete')->orderBy('id', 'ASC')->get();
       // dd($data);
 
        return view('excele.Complete')->with('data' ,$data);
@@ -26,7 +26,7 @@ class MasterImportController1 extends Controller
      }
 
      public function import(Request $request)
-     {  dd(20);
+     {  //dd(20);
         $this->validate($request, [
         'select_file' => 'required|mimes:xls,xlsx'
         ],

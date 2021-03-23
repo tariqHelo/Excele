@@ -112,25 +112,18 @@
                                     <thead>
                                         <tr>
                                             <th>id</th>
-                                            <th>Code</th>
-                                            <th>Description</th>
-                                            <th>Desc</th>
-                                             <th>status</th>
+                                            <th>Class</th>
+                                            <th>BasicNo</th>
+                                            <th>EN</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($data as $row)
                                             <tr role="row" class="odd">
-                                                <td class="">{{ $row->id }}</td>
-                                                <td class="">{{ $row->Code }}</td>
-                                               <td class="">{{ $row->Description }}</td>
-                                                //<td class="">{{ $row->Desc ?? "" }}</td>
-                                                <td class="">{{ $row->status }}</td>
-
-                                                <td class="text-center">
-                                                    <a class="m-r-15 text-muted importEdit" data-toggle="modal" data-idUpdate="'.$row->id.'" data-target="#ImportUpdate">Edit</a>
-                                                    <a href="import_excel/{{ $row->id }}" onclick="return confirm('Are you sure to want to delete it?')" class="text-muted">Delect</a>
-                                                </td>
+                                              <td class="">{{ $row->id }}</td>
+                                                <td class="">{{ $row->Class }}</td>
+                                                <td class="">{{ $row->BasicNo }}</td>
+                                               <td class="">{{ $row->EN }}</td>
                                             </tr>
                                         @endforeach
                                     </tbody>
